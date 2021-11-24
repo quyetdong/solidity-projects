@@ -23,12 +23,6 @@
 // const fs = require('fs');
 // const mnemonic = fs.readFileSync(".secret").toString().trim();
 
-//1. Initialize `truffle-hdwallet-provider`
-const HDWalletProvider = require('truffle-hdwallet-provider');
-
-// Set your own mnemonic here
-const mnemonic = "YOUR_MNEMONIC";
-
 module.exports = {
   /**
    * Networks define how you connect to your ethereum client and let you set the
@@ -77,23 +71,6 @@ module.exports = {
     // network_id: 2111,   // This network is yours, in the cloud.
     // production: true    // Treats this network as if it was a public net. (default: false)
     // }
-    // Configuration for mainnet
-    mainnet: {
-      provider: function () {
-        // Setting the provider with the Infura Mainnet address and Token
-        return new HDWalletProvider(mnemonic, "https://mainnet.infura.io/v3/YOUR_TOKEN")
-      },
-      network_id: "1"
-    },
-    // Configuration for rinkeby network
-    rinkeby: {
-      // Special function to setup the provider
-      provider: function () {
-        // Setting the provider with the Infura Rinkeby address and Token
-        return new HDWalletProvider(mnemonic, "https://rinkeby.infura.io/v3/YOUR_TOKEN")
-      },
-      network_id: 4 //Fill in the `network_id` for the Rinkeby network.
-    }
   },
 
   // Set default mocha options here, use special reporters etc.

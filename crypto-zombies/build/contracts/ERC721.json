@@ -140,7 +140,7 @@
   "sourceMap": "",
   "deployedSourceMap": "",
   "source": "pragma solidity >=0.4.22 <0.9.0;\r\n\r\nabstract contract ERC721 {\r\n  event Transfer(address indexed _from, address indexed _to, uint256 indexed _tokenId);\r\n  event Approval(address indexed _owner, address indexed _approved, uint256 indexed _tokenId);\r\n\r\n  function balanceOf(address _owner) virtual external view returns (uint256);\r\n  function ownerOf(uint256 _tokenId) virtual external view returns (address);\r\n  function transferFrom(address _from, address _to, uint256 _tokenId) virtual external payable;\r\n  function approve(address _approved, uint256 _tokenId) virtual external payable;\r\n}\r\n",
-  "sourcePath": "D:\\1.Projects\\6.Solidity\\CryptoZombies\\contracts\\erc721.sol",
+  "sourcePath": "D:\\1.Projects\\6.Solidity\\crypto-zombies\\contracts\\erc721.sol",
   "ast": {
     "absolutePath": "project:/contracts/erc721.sol",
     "exportedSymbols": {
@@ -1369,7 +1369,7 @@
   },
   "networks": {},
   "schemaVersion": "3.4.3",
-  "updatedAt": "2021-11-24T02:37:18.905Z",
+  "updatedAt": "2021-11-24T09:57:49.388Z",
   "devdoc": {
     "kind": "dev",
     "methods": {},
