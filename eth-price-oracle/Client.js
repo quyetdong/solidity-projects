@@ -52,13 +52,10 @@ async function init () {
   const networkId = await web3js.eth.net.getId()
   const oracleAddress =  OracleJSON.networks[networkId].address
   await callerContract.methods.setOracleInstanceAddress(oracleAddress).send({ from: ownerAddress })
-  console.log('** 1')
   setInterval( async () => {
         try {
-            console.log('** 2 ', ownerAddress)
             // Start here
             await callerContract.methods.updateEthPrice().send({ from: ownerAddress })
-            console.log('** 3')
         } catch (err) {
             console.log('* Error communicate caller contract.')
         }
