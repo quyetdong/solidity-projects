@@ -1,14 +1,22 @@
 pragma solidity 0.8.10;
 
-import "@openzeppelin/contracts/access/Ownable.sol";
+import "@openzeppelin/contracts/access/Roles.sol";
 import "./CallerContractInterface.sol";
 
-contract EthPriceOracle is Ownable {
+contract EthPriceOracle {
+    using Roles for Roles.Role;
+    Roles.Role private owners;
+    Roles.Role private oracles;
+
     uint256 private randNonce = 0;
     uint256 private modulus = 1000;
     mapping(uint256 => bool) pendingRequests;
     event GetLatestEthPriceEvent(address callerAddress, uint256 id);
     event SetLatestEthPriceEvent(uint256 ethPrice, address callerAddress);
+
+    constructor(address _owner) public {
+        owners.add(_owner);
+    }
 
     function getLatestEthPrice() public returns (uint256) {
         randNonce++;
@@ -26,13 +34,13 @@ contract EthPriceOracle is Ownable {
         uint256 _ethPrice,
         address _callerAddress,
         uint256 _id
-    ) public onlyOwner {
+    ) public {
         require(
             pendingRequests[_id],
             "This request is not in my pending list."
         );
         delete pendingRequests[_id];
-        
+
         // Start here
         CallerContractInterface callerContractInstance;
         callerContractInstance = CallerContractInterface(_callerAddress);
