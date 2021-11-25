@@ -23,6 +23,15 @@
 // const fs = require('fs');
 // const mnemonic = fs.readFileSync(".secret").toString().trim();
 
+//1. Initialize `truffle-hdwallet-provider`
+const HDWalletProvider = require('truffle-hdwallet-provider');
+const LoomTruffleProvider = require('loom-truffle-provider');
+const path = require('path')
+const fs = require('fs')
+
+// Set your own mnemonic here
+const mnemonic = "kiwi amazing property extend just erase similar under ridge add weekend tide";
+
 module.exports = {
   /**
    * Networks define how you connect to your ethereum client and let you set the
@@ -71,6 +80,26 @@ module.exports = {
     // network_id: 2111,   // This network is yours, in the cloud.
     // production: true    // Treats this network as if it was a public net. (default: false)
     // }
+    loom_testnet: {
+      provider: function() {
+        const privateKey = 'Fa/x6Ny+tRnPFtq4RS0xZte6wLx+/Mwux/xNXuCSiskZz5b+fYPAkalr9Az2FQClG3ZkF+4NXSaBh7XSROwk3g=='
+        const chainId = 'extdev-plasma-us1';
+        const writeUrl = 'http://extdev-plasma-us1.dappchains.com:80/rpc';
+        const readUrl = 'http://extdev-plasma-us1.dappchains.com:80/query';
+        return new LoomTruffleProvider(chainId, writeUrl, readUrl, privateKey);
+        },
+      network_id: '9545242630824'
+    },
+    extdev: {
+      provider: function () {
+        const privateKey = fs.readFileSync(path.join(__dirname, 'caller_private_key'), 'utf-8')
+        const chainId = 'extdev-plasma-us1'
+        const writeUrl = 'wss://extdev-plasma-us1.dappchains.com/websocket'
+        const readUrl = 'wss://extdev-plasma-us1.dappchains.com/queryws'
+        return new LoomTruffleProvider(chainId, writeUrl, readUrl, privateKey)
+      },
+      network_id: '9545242630824'
+    }
   },
 
   // Set default mocha options here, use special reporters etc.

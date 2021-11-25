@@ -4,15 +4,19 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy:oracle": "cd oracle && npx truffle migrate --network extdev --reset -all && cd ..",
+    "deploy:caller": "cd caller && npx truffle migrate --network extdev --reset -all && cd ..",
+    "deploy:all": "npm run deploy:oracle && npm run deploy:caller"
   },
   "dependencies": {
-    "truffle": "*",
-    "openzeppelin-solidity": "*",
-    "loom-js": "*",
-    "loom-truffle-provider": "*",
-    "bn.js": "*",
-    "axios": "*"
+    "@openzeppelin/contracts": "^4.3.3",
+    "axios": "^0.24.0",
+    "bn.js": "^5.2.0",
+    "loom-js": "1.80",
+    "loom-truffle-provider": "^0.13.0",
+    "truffle": "^5.4.22",
+    "truffle-hdwallet-provider": "^1.0.17"
   },
   "keywords": [],
   "author": "",

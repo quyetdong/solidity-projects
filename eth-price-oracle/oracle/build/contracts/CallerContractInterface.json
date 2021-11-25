@@ -1,0 +1,300 @@
+{
+  "contractName": "CallerContractInterface",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_ethPrice",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "id",
+          "type": "uint256"
+        }
+      ],
+      "name": "callback",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.8.10+commit.fc410830\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_ethPrice\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"id\",\"type\":\"uint256\"}],\"name\":\"callback\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/CallerContractInterface.sol\":\"CallerContractInterface\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/CallerContractInterface.sol\":{\"keccak256\":\"0xb296622937a39a8315304c69b27a34247e0a2648c58911854eeca665652467ff\",\"urls\":[\"bzz-raw://5e1cef5cb424e3e7b22b37767090a08cc578a056e8604d0cd9bd9b8ca2c6680c\",\"dweb:/ipfs/QmZi4T29BybLaMPjwwRp9TcQyLZmDePP3hjWyfZyrqx4Bz\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "immutableReferences": {},
+  "generatedSources": [],
+  "deployedGeneratedSources": [],
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "pragma solidity 0.8.10;\r\n\r\ninterface CallerContractInterface {\r\n  function callback(uint256 _ethPrice, uint256 id) external;\r\n}\r\n",
+  "sourcePath": "D:\\1.Projects\\6.Solidity\\eth-price-oracle\\oracle\\contracts\\CallerContractInterface.sol",
+  "ast": {
+    "absolutePath": "project:/contracts/CallerContractInterface.sol",
+    "exportedSymbols": {
+      "CallerContractInterface": [
+        135
+      ]
+    },
+    "id": 136,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 127,
+        "literals": [
+          "solidity",
+          "0.8",
+          ".10"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:2"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "CallerContractInterface",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": false,
+        "id": 135,
+        "linearizedBaseContracts": [
+          135
+        ],
+        "name": "CallerContractInterface",
+        "nameLocation": "37:23:2",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "functionSelector": "b5d73ba4",
+            "id": 134,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "callback",
+            "nameLocation": "75:8:2",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 132,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 129,
+                  "mutability": "mutable",
+                  "name": "_ethPrice",
+                  "nameLocation": "92:9:2",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 134,
+                  "src": "84:17:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 128,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "84:7:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 131,
+                  "mutability": "mutable",
+                  "name": "id",
+                  "nameLocation": "111:2:2",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 134,
+                  "src": "103:10:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 130,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "103:7:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "83:31:2"
+            },
+            "returnParameters": {
+              "id": 133,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "123:0:2"
+            },
+            "scope": 135,
+            "src": "66:58:2",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 136,
+        "src": "27:100:2",
+        "usedErrors": []
+      }
+    ],
+    "src": "0:129:2"
+  },
+  "legacyAST": {
+    "absolutePath": "project:/contracts/CallerContractInterface.sol",
+    "exportedSymbols": {
+      "CallerContractInterface": [
+        135
+      ]
+    },
+    "id": 136,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 127,
+        "literals": [
+          "solidity",
+          "0.8",
+          ".10"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:2"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "CallerContractInterface",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": false,
+        "id": 135,
+        "linearizedBaseContracts": [
+          135
+        ],
+        "name": "CallerContractInterface",
+        "nameLocation": "37:23:2",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "functionSelector": "b5d73ba4",
+            "id": 134,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "callback",
+            "nameLocation": "75:8:2",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 132,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 129,
+                  "mutability": "mutable",
+                  "name": "_ethPrice",
+                  "nameLocation": "92:9:2",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 134,
+                  "src": "84:17:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 128,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "84:7:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 131,
+                  "mutability": "mutable",
+                  "name": "id",
+                  "nameLocation": "111:2:2",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 134,
+                  "src": "103:10:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 130,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "103:7:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "83:31:2"
+            },
+            "returnParameters": {
+              "id": 133,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "123:0:2"
+            },
+            "scope": 135,
+            "src": "66:58:2",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 136,
+        "src": "27:100:2",
+        "usedErrors": []
+      }
+    ],
+    "src": "0:129:2"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.8.10+commit.fc410830.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.4.3",
+  "updatedAt": "2021-11-25T10:41:40.019Z",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {},
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  }
+}
